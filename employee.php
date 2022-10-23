@@ -1,9 +1,9 @@
 <?php
 class Employee
     {
-        public $name;//Ім'я
-        public $age ;//Вік
-        public $salary;//зарплата
+        private $name;//Ім'я
+        private $age ;//Вік
+        private $salary;//зарплата
 
         public function __construct($a,$b,$c) //конструктор
         {
