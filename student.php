@@ -21,7 +21,7 @@ class Student
                 if (($this->course++ >= 1) or ($this->course++ <= 5))
                     return $this->course++;
             }
-            
+
        public function __get ($name)
             {
                 return $this->$name;
@@ -29,6 +29,12 @@ class Student
 
         public function __set ($name, $value)
             {
-                return $this->$name=$value;
+                if ($name == 'age') $this->isAgeCorrect($value);
+                    //else 
+                    return $this->$name = $value;
+            }
+        public function isAgeCorrect($age)
+            {
+                if (($age >1) and ($age<100)) return $this->age = $age;
             }
     }

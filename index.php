@@ -16,3 +16,10 @@ $user2=new Employee('kyle',30,2000);
 echo "<h4 style='color: red'>Урок 6 Завдання 10 </h4>";
 echo "Загальна зарплата ".$user1->getSalary()+$user2->getSalary()."<br>";
 echo "Сумарний вік ".$user1->getAge()+$user2->getAge()."<br>";
+
+echo "<h4 style='color: red'>Урок 6 Завдання 13 </h4>";
+$user1->__set('age',150);
+echo "Змніню на 150 - ". $user1->__get('age')."<br>";
+$user2->__set('age',15);
+echo "Змніню на 15 - ". $user2->__get('age')."<br>";
+
