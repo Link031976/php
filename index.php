@@ -46,3 +46,12 @@ class Users extends User
     {
         
     }
+
+$users = new Users('Василь',25);
+$users->setAge(50);
+echo "Якщо змінити на 50, то отримаємо ".$users->age."<br>";
+$users->setAge(5);
+echo "Якщо змінити на 5, то отримаємо ".$users->age."<br>";
+echo "<h4 style='color: red'>Урок 5 Завдання 18 </h4>";   
+$users->subAge(5);
+echo "Віднімемо 5, та отримаємо ".$users->age."<br>";
