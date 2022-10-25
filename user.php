@@ -20,8 +20,14 @@ class User
                 return $this->name;
             }
         
-            public function getAge()
+         public function setAge($age) 
             {
-                return $this->age;
+                if ($age>=18) $this->age=$age; //lesson5 line 18
             }
-    }
+        
+            public function subAge($age) 
+            {
+                $this->age = $this->age - $age;
+            }
+        }
+
