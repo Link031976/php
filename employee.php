@@ -11,6 +11,7 @@ class Employee
             $this->age=$b;
             $this->salary=$c;
         }
+        
         public function getName() //повернення ім'я
             {return $this->name;}
 
@@ -22,11 +23,12 @@ class Employee
 
         public function checkAge() //перевірка на повноліття
             {
-                if ($this->$age>18) return TRUE;
+                if ($this->age>18) return TRUE;
                    else return FALSE;
             }
 
         public function doubleSalary()
+
             {$this->salary=$this->salary*2;}
 
             public function __get ($name)
@@ -43,5 +45,6 @@ class Employee
         public function isAgeCorrect($age)
             {
                 if (($age >1) and ($age<100)) return $this->age = $age;
-            }
+            }        
+
     }
