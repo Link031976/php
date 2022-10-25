@@ -14,9 +14,8 @@ class Arr
     {
         $n=count($mas);
         for ($i=0;$i< $n;$i++)
-            {
-                $this->numbers[]=$mas[$i];
-               //echo $i." ";
+            {  
+                $this->numbers[]=$mas[$i];               
                 $this->index++;
             }
         $this->index--;
@@ -26,4 +25,12 @@ class Arr
             echo "<pre>";
             print_r($this->numbers);
         }    
+        
+    public function getAvg()
+    {
+        $sum=0;
+        for ($i=0;$i<= $this->index;$i++)
+            $sum=$sum + $this->numbers[$i];
+        return array_sum($this->numbers)/$this->index;
+    }
 }

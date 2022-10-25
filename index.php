@@ -25,3 +25,6 @@ print_r($mas);
 $arr->add($mas);
 echo "Отримано:";
 $result=$arr->get();
+
+
+    echo "Середнє арифмітичне ".$arr->getAvg();
