@@ -1,14 +1,15 @@
 <?php
 class Employee
     {
-        public $name;//Ім'я
-        public $age ;//Вік
-        public $salary;//зарплата
+        public readonly string $name;
+        public readonly string $surname;      
+        private $salary;//зарплата
 
-        public function __construct($a,$b,$c) //конструктор
+
+        public function __construct($a,$b,$c) 
         {
             $this->name=$a;
-            $this->age=$b;
+            $this->surname=$b;
             $this->salary=$c;
         }
         public function getName() //повернення ім'я
