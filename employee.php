@@ -1,14 +1,15 @@
 <?php
 class Employee
     {
-        private $name;//Ім'я
-        private $age ;//Вік
-        private $salary;//зарплата
 
-        public function __construct($a,$b,$c) //конструктор
+        public readonly string $name;
+        public readonly string $surname;
+        private $age ;//Вік
+       
+        public function __construct($a,$b,$c) 
         {
             $this->name=$a;
-            $this->age=$b;
+            $this->surname=$b;
             $this->salary=$c;
         }
         

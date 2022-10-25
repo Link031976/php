@@ -13,6 +13,12 @@ class Student
         
         public function transferToNextCourse()
             {
+
+                $this->toNextCourse();               
+            }
+            
+        private function toNextCourse()
+            {                
                 $this->toNextCourse();
             }
             
@@ -22,6 +28,7 @@ class Student
                     return $this->course= $this->course+1;
             }
 
+
        public function __get ($name)
             {
                 return $this->$name;
@@ -29,12 +36,18 @@ class Student
 
         public function __set ($name, $value)
             {
+                return $this->$name=$value;
+                if ($name == 'age') $this->isAgeCorrect($value);
+                return $this->$name = $value;
+
                 if ($name == 'age') $this->isAgeCorrect($value);
                     //else 
                     return $this->$name = $value;
+
             }
         public function isAgeCorrect($age)
             {
                 if (($age >1) and ($age<100)) return $this->age = $age;
             }
+
     }
