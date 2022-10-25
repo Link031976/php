@@ -16,10 +16,10 @@ class Student
                 $this->toNextCourse();
             }
             
-        private function toNextCourse()
+            private function toNextCourse()
             {
-                if (($this->course++ >= 1) or ($this->course++ <= 5))
-                    return $this->course++;
+                if (($this->course+1 >= 1) and ($this->course +1 <= 5)) 
+                    return $this->course= $this->course+1;
             }
 
        public function __get ($name)

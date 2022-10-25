@@ -3,10 +3,14 @@ require_once('employee.php');
 require_once('student.php');
 
 echo "<h4 style='color: red'>Урок 6 Завдання 3 </h4>";
-$student = new Student ("П'яточкин",1);
+$student = new Student ("П'яточкин",3);
 echo "Додано студента ".$student->course." курсу ".$student->name."<br>";
 
 echo "<h4 style='color: red'>Урок 6 Завдання 4 </h4>";
+$student->transferToNextCourse();
+echo " переведено на наступний ".$student->course." курс <br>";
+$student->transferToNextCourse();
+echo " переведено на наступний ".$student->course." курс <br>";
 $student->transferToNextCourse();
 echo " переведено на наступний ".$student->course." курс <br>";
 
