@@ -1,33 +1,46 @@
 <?php
-require_once('employee.php');
-require_once('arr.php');
-require_once('city.php');
+ include('arr.php');
+ include('city.php');
+ include('user.php');
 
-$user1=new Employee('John',25,1000); //створення об'єкту work1 класу Employee
-$user2=new Employee('urik',26,2000); //створення об'єкту work2 класу Employee
-        
-echo "Загальна зарплата ".$user1->getSalary()+$user2->getSalary()."<br>";
-echo "Сумарний вік ".$user1->getAge()+$user2->getAge()."<br>";
+ $arr = new Arr;
+ $arr->set(10);
+ $arr->set(11);
+ $arr->set(12);
+ $arr->set(13);
 
-$arr = new Arr;
-$arr->set(10);
-$arr->set(11);
-$arr->set(12);
-$arr->set(13);
+ //echo $arr->getSum(); // виведе 0
+ echo "<h4 style='color: red'>Завдання 1 </h4>";
+ echo "Початковий:";
+ $result=$arr->get();
+ 
+ echo "Додаємо: <pre>";
+ $mas=array(20,21,22,23,24);
+ print_r($mas);
+     
+ $arr->add($mas); 
+ echo "Отримано:";    
+ $result=$arr->get();
 
-//echo $arr->getSum(); // виведе 0
-echo "Початковий:";
-$result=$arr->get();
+ echo "<h4 style='color: red'>Завдання 2 </h4>";
+ $result=$arr->get();
+ echo "Середнє арифмітичне ".$arr->getAvg()."\n";
 
-echo "Додаємо: <pre>";
-$mas=array(20,21,22,23,24);
-print_r($mas);
+ echo "<h4 style='color: red'>Завдання 3-4 </h4>";
+ $city= new City;
+ $class_vars = get_class_vars(get_class($city));
+ print_r($city->props);
 
-$arr->add($mas);
-echo "Отримано:";
+ echo "<h4 style='color: red'>Завдання 5 </h4>"; 
+ $user = new User('Іванов', 'Іван', 'Іванович',52);
+ $props = ['prop1' => 'surname', 'prop2' => 'name', 'prop3' => 'patronymic'];
+ echo $user->{$props['prop1']}." "; // виведе 'Іванов'
+ echo $user->{$props['prop2']}." "; // виведе 'Іванов'
+ echo $user->{$props['prop3']}; // виведе 'Іванов'
 
-$result=$arr->get();
-    echo "Середнє арифмітичне ".$arr->getAvg();
-
-    $arr = new Arr;
-    $arr->set(10);
+  echo "<h4 style='color: red'>Завдання 6 </h4>";
+ $methods = ['method1' => 'getName', 'method2' => 'getAge'];    
+ foreach ($methods as $i)
+     {
+         echo $user->$i();            
+     }
