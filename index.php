@@ -1,6 +1,7 @@
 <?php
 require_once('employee.php');
 require_once('arr.php');
+require_once('city.php');
 
 $user1=new Employee('John',25,1000); //створення об'єкту work1 класу Employee
 $user2=new Employee('urik',26,2000); //створення об'єкту work2 класу Employee
@@ -24,7 +25,9 @@ print_r($mas);
 
 $arr->add($mas);
 echo "Отримано:";
+
 $result=$arr->get();
-
-
     echo "Середнє арифмітичне ".$arr->getAvg();
+
+    $arr = new Arr;
+    $arr->set(10);
