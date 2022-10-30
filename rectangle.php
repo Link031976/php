@@ -5,10 +5,10 @@
         public $b;
 
         public function __construct($a,$b)
-        {
-            $this->a=$a;
-            $this->b=$b;          
-        }
+            {
+                $this->a=$a;
+                $this->b=$b;          
+            }
 
         public function getSquare()
             {
@@ -18,7 +18,5 @@
         public function getPerimeter()
             {
                 return ($this->a+$this->b)*2;
-            }
-
-        
+            }       
     }
