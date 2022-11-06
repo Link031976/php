@@ -1,8 +1,31 @@
 <?php
-require_once('employee.php');
+$k=3;     
+$strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"]; 
+ 
+echo "Нехай надано масив сліва:";     
+$n=count($strarr); 
+$flag=''; 
+foreach ($strarr as $word)  
+    { 
+        echo " ".$word; 
+        $str=str_split($word);//повертаэмо строку у масив символыв 
+        $key=$str[0]; //ключь = перший символ слова 
+        $calc=1; // це лічильник однакових символів 
+        for ($i=1; $i < count ($str); $i++)  
+            {                      
+                 
+                if ($str[$i] == $key) 
+                    { 
+                        $calc++; 
 
-$user1=new Employee('John',25,1000); //створення об'єкту work1 класу Employee
-$user2=new Employee('urik',26,2000); //створення об'єкту work2 класу Employee
-        
-echo "Загальна зарплата ".$user1->getSalary()+$user2->getSalary()."<br>";
-echo "Сумарний вік ".$user1->getAge()+$user2->getAge()."<br>";
+                        if ($calc ==$k) $flag=$word;                             
+                    } 
+                    else $key=$str[$i] ; 
+                //echo "key = ".$key." look= ".$str[$i]." calc= ".$calc ."<br>";     
+                if ($flag != '') break;                        
+            } 
+    } 
+echo "<br> У наданих словах послідовність ".$k." однакових символів, "; 
+if ($flag =='')  
+    echo "таких слів не знайдено"; 
+    else echo "знайдено слово: ".$flag;
