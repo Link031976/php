@@ -19,3 +19,11 @@
     echo "Водій ".$water -> __get ('name'). ", ".$water -> __get ('age').
         " років, водійської категорії \"" .$water -> __get ('categoryWate').
         "\" має водійський стаж ".$water -> __get ('seniorityWater')." роки"    ;
+
+    echo "<h4 style='color: red'>Урок 11 Завдання 5 </h4>";
+    require_once('Student.php');
+    $stud = new Student;
+    $stud -> setCourse(3);
+    echo "Студент ".$stud -> getCourse()." курсу переведено на ";
+    $stud -> addOneYear();
+    echo $stud -> getCourse()."-й курс";
