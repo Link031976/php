@@ -5,13 +5,14 @@
     {
         private $dirName=[];
         private $fileName=[];
-        
+
         public function bildTree($f)
         {
             $bf = new DirectoryIterator($f); //создаю объект с методами для работы с файлами
             foreach ($bf as $fileinfo) //перебираю объекты (файлі и папки) текущей папки
             {                    
                 $name = $fileinfo->getFilename(); // имя файла/папки
+                $name8 = mb_convert_encoding($name, "utf-8", "windows-1251");                
                 if ( $fileinfo->getType() == 'dir') // добавляю в список папок                   
                     if ($name != ".") // исключаю возврат в корневой каталог диска
                         if ($name != "..") // исключаю возврат из текущей папки
@@ -62,11 +63,8 @@
                 $filesize = round($filesize, 1);
                 return $filesize." байт";   
                 }
-        }
+        }        
     }
-
-   
-    
 
     echo "<h2 align='center'>Дерево папки ".$f."</h2><br>"; 
     echo "Умовні позначення: <span style='color: blue'>назва папки</span>, <span style='color: green'> 
