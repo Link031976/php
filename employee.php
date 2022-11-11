@@ -1,31 +1,15 @@
 <?php
-class Employee
+class Employee extends User
     {
-        public $name;//Ім'я
-        public $age ;//Вік
-        public $salary;//зарплата
+        public $salary;
 
-        public function __construct($a,$b,$c) //конструктор
+        public function __construct($name , $surname , $birthday , $salary)
         {
-            $this->name=$a;
-            $this->age=$b;
-            $this->salary=$c;
+            parent::__construct($name,$surname,$birthday);
+            $this->salary = $salary;
         }
-        public function getName() //повернення ім'я
-            {echo "Працівник ".$this->name;}
-
-        public function getAge() //повернення віку
-            {return $this->age;}
-
-        public function getSalary() // повернення рівня зп
-            {return $this->salary;}
-
-        public function checkAge() //перевірка на повноліття
-            {
-                if ($this->$age>18) return TRUE;
-                   else return FALSE;
-            }
-
-        public function doubleSalary()
-            {$this->salary=$this->salary*2;}
+        public  function getSalary()
+        {
+            return $this->salary;
+        }
     }
