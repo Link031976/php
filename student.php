@@ -1,4 +1,4 @@
 <?php
-    class Employee extends User
+    class Student extends User
     {
     }
