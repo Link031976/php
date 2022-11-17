@@ -20,6 +20,10 @@
         {
             return $this->price * $this->quantity;
         }
+        public function getQuantity()
+        {
+            return $this->quantity;
+        }
     }
 
     class Cart
@@ -41,7 +45,31 @@
                     $i++;
                 }            
         }
-
+        //Task 10
+        public function getTotalCost()
+        {
+            $sum=0;
+            foreach ($this->product as &$prod)
+            {
+                $sum = $sum + $prod->getCost();                
+            }
+            return $sum;
+        }
+        //Task 11
+        public function getTotalQuantity()
+        {
+            $sum = 0;
+            foreach ($this->product as &$prod)
+            {
+                $sum = $sum + $prod->getQuantity();                
+            }
+            return $sum;
+        }
+        //Task 12
+        public function getAvgPrice()
+        {           
+            return $this->getTotalCost()/$this->getTotalQuantity();
+        }
     }
     $mas = [1,2,3,4,5];
     $avgHelper = new AvgHelper;
@@ -66,14 +94,18 @@
     //Task 7
     $cart = new Cart;
      //Task 8
-    $cart->add(new Product('Стіл',2300,20));
-    $cart->add(new Product('Стілець',1300,20));
-    $cart->add(new Product('Шухляда',3300,20));
-    $cart->add(new Product('Табурет',300,20));
+    $cart->add(new Product('{Хліб}',18,20));
+    $cart->add(new Product('Масло',75,20));
+    $cart->add(new Product('Батон дорожній',33,20));
+    $cart->add(new Product('Здоба',300,20));
     print_r($cart);
          //Task 9
-    $cart->remove('Шухляда');
+    $cart->remove('Масло');
     print_r($cart);
-
-
+    //Task 10
+    echo "Загальна вартість Продуктів ".$cart->getTotalCost()."<br>";
+    //Task 11
+    echo "Всього ".$cart->getTotalQuantity()." продуктів <br>";
+       //Task 12
+    echo "Середня вартість продукту ".$cart->getAvgPrice();
     
