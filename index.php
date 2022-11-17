@@ -5,7 +5,7 @@
 
     class Product
     {
-        private readonly string $name;
+        public readonly string $name;
         private readonly int $price;
         private readonly int $quantity;
 
@@ -24,12 +24,24 @@
 
     class Cart
     {
-        public $product;
+        public $product=[];
 
+            //Task 8
         public function add($products)
         {
-            $this->product = $products;
+            $this->product[] = $products;
         }
+             //Task 9
+        public function remove($name)
+        {
+            $i=0;
+            foreach ($this->product as &$prod)
+                {   
+                    if ($prod->name == $name) unset($this->product[$i]);
+                    $i++;
+                }            
+        }
+
     }
     $mas = [1,2,3,4,5];
     $avgHelper = new AvgHelper;
@@ -53,4 +65,15 @@
     echo "Вартість продукту ".$product->getCost()."<br>";
     //Task 7
     $cart = new Cart;
-    $cart->add()
+     //Task 8
+    $cart->add(new Product('Стіл',2300,20));
+    $cart->add(new Product('Стілець',1300,20));
+    $cart->add(new Product('Шухляда',3300,20));
+    $cart->add(new Product('Табурет',300,20));
+    print_r($cart);
+         //Task 9
+    $cart->remove('Шухляда');
+    print_r($cart);
+
+
+    
