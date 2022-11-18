@@ -85,3 +85,34 @@
     }
     echo "сума зарплата працівників : ".$sumEmployee."<br>";
     echo "сума стипендій студентів: ".$sumStudent."<br>";
+
+    //Line 15
+    $arr[] = new User('User_Oscar');
+    $arr[] = new User('User_George');
+    $arr[] = new User('User_Thomas');
+
+    $arr[] = new UserEmployee('UserEmployee_Chad');
+    $arr[] = new UserEmployee('UserEmployee_Clayton');
+    $arr[] = new UserEmployee('UserEmployee_Ashley');
+
+    $arr[] = new City('City_Oliver');
+    $arr[] = new City('City_Jack');
+    $arr[] = new City('City_Jacob');
+
+    echo "<p style='color: red'>Урок 14 Завдання 16 </p>";
+    echo "<ul>";
+    foreach ($arr as $element)
+    { 
+        if ($element instanceof User) 
+            echo "<li>".$element->name."</li>";
+    }
+    echo "</ul>";
+
+    echo "<p style='color: red'>Урок 14 Завдання 17 </p>";
+    echo "<ul>";
+    foreach ($arr as $element)
+    { 
+        if (!($element instanceof User) )
+            echo "<li>".$element->name."</li>";
+    }
+    echo "</ul>";
