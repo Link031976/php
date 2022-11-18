@@ -116,3 +116,5 @@
             echo "<li>".$element->name."</li>";
     }
     echo "</ul>";
+
+    echo "<a href='index19.php'>Завдання 19</a>";
