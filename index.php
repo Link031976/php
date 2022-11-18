@@ -58,10 +58,17 @@
     $arr[] = new Student('Charley',2000);
     $arr[] = new Student('Thomas',2000);
 
-    print_r($arr);
+    //print_r($arr);
     echo "<p style='color: red'>Урок 14 Завдання 9 </p>";
 
+    echo "Список імен: <ul>";
+    foreach ($arr as $element)
+        echo "<li>".$element->name."</li>";    
+    echo "</ul>";
+
+    echo "<p style='color: red'>Урок 14 Завдання 10 </p>";
     foreach ($arr as $element)
     {
         
+        echo "<li>".$element->name."</li>";
     }
