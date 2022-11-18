@@ -54,9 +54,9 @@
     $arr[] = new Employee('Harry',2000);
     $arr[] = new Employee('Jack',2000);
 
-    $arr[] = new Student('Jacob',2000);
-    $arr[] = new Student('Charley',2000);
-    $arr[] = new Student('Thomas',2000);
+    $arr[] = new Student('Jacob',1000);
+    $arr[] = new Student('Charley',1000);
+    $arr[] = new Student('Thomas',1000);
 
     //print_r($arr);
     echo "<p style='color: red'>Урок 14 Завдання 9 </p>";
@@ -67,8 +67,21 @@
     echo "</ul>";
 
     echo "<p style='color: red'>Урок 14 Завдання 10 </p>";
+    echo "Список студентів: <ul>";
     foreach ($arr as $element)
-    {
-        
-        echo "<li>".$element->name."</li>";
+    {        
+        if ($element instanceof Student)
+            echo "<li>".$element->name."</li>";
     }
+    echo "</ul>";
+    
+    echo "<p style='color: red'>Урок 14 Завдання 11 </p>";
+    $sumStudent = 0;
+    $sumEmployee = 0;
+    foreach ($arr as $element)
+    {        
+        if ($element instanceof Student)  $sumStudent+=$element->scholarship;
+        if ($element instanceof Employee) $sumEmployee+=$element->salary;            
+    }
+    echo "сума зарплата працівників : ".$sumEmployee."<br>";
+    echo "сума стипендій студентів: ".$sumStudent."<br>";
