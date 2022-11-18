@@ -43,7 +43,25 @@
 
     echo "<p style='color: red'>Урок 14 Завдання 4 </p>";
     $employeesCollection = new EmployeesCollection;
-    $employee = new Employee ( 'john', 100);
-    $employeesCollection->add($employee);
-    $employeesCollection->add($employee); // не додасть, тк той самий об'єкт    
-    print_r($employeesCollection->get());
+    $employee1 = new Employee ( 'john', 100);    
+    $employeesCollection->add($employee1);
+    $employee2 = new Employee ( 'joh', 100);       
+    $employeesCollection->add($employee2); // не додасть, тк той самий об'єкт    
+    print_r($employeesCollection);
+
+    echo "<p style='color: red'>Урок 14 Завдання 8 </p>";
+    $arr[] = new Employee('Oliver',2000);
+    $arr[] = new Employee('Harry',2000);
+    $arr[] = new Employee('Jack',2000);
+
+    $arr[] = new Student('Jacob',2000);
+    $arr[] = new Student('Charley',2000);
+    $arr[] = new Student('Thomas',2000);
+
+    print_r($arr);
+    echo "<p style='color: red'>Урок 14 Завдання 9 </p>";
+
+    foreach ($arr as $element)
+    {
+        
+    }

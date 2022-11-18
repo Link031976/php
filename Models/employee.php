@@ -1,8 +1,8 @@
 <?php
     class Employee
     {
-        private $name;
-        private $salary;
+        public $name;
+        public $salary;
 
         public function __construct($name, $salary)
         {
