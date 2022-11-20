@@ -1,5 +1,4 @@
 <?php
-    $f='Models';
     $bf = new DirectoryIterator($f); //создаю объект с методами для работы с файлами
     foreach ($bf as $fileinfo) //перебираю объекты (файлі и папки) текущей папки
         {                    
