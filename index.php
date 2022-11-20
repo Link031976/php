@@ -117,4 +117,13 @@
     }
     echo "</ul>";
 
+    echo "<p style='color: red'>Урок 14 Завдання 18 </p>";
+    echo "<ul>";
+    foreach ($arr as $element)
+    { 
+        if ($element instanceof User) 
+            echo "<li>".$element->name."</li>";
+    }
+    echo "</ul>";
+
     echo "<a href='index19.php'>Завдання 19</a>";
