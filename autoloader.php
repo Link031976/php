@@ -8,6 +8,6 @@
                 if ($name != "..") 
                 {
                     require_once($f."\\".$name);  
-                    //echo $f."\\".$name."<br>";
+                    echo $f."\\".$name."<br>";
                 } 
         }
