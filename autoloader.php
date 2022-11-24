@@ -1,32 +1,13 @@
 <?php
-   
-    //program for receiving files with class description
-    // програма для приєднання файлів з описом классі 
-
-    // ім'я папки для опрацювання
-    //the name of the folder to process
     $f='Models';
-
-    //create an object with methods for working with files
-    //Створюю об'єкт з методом для роботи з файлами
-    $bf = new DirectoryIterator($f); 
-   
-    //I go through the $f directory with files
-    //перебираю ктаталог $f з файлами 
-    foreach ($bf as $fileinfo) 
+    $bf = new DirectoryIterator($f); //создаю объект с методами для работы с файлами
+    foreach ($bf as $fileinfo) //перебираю объекты (файлі и папки) текущей папки
         {                    
-            // return filename
-            // повертаю ім'я файлу
-            $name = $fileinfo->getFilename(); 
-            // exclude links to return to the root directory of the disk
-            // виключаю посилання на повернення у коріневий каталог диску  
-            if ($name != ".")          
+            $name = $fileinfo->getFilename(); // имя файла/папки                
+            if ($name != ".") // исключаю возврат в корневой каталог диска
                 if ($name != "..") 
                 {
-                    require_once($f."\\".$name);  //add a class description file to the program
-                    // додаю файл з описом классу до програми
-
-                    //for code testing для тестування коду
+                    require_once($f."\\".$name);  
                     //echo $f."\\".$name."<br>";
                 } 
         }
