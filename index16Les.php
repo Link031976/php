@@ -138,3 +138,4 @@ echo "<p style='color: blue'>Урок 16 get_parent_class </p>";
     //Виведіть список усіх оголошених класів.
     echo "<pre>";
     print_r(get_declared_classes ());
+    echo "<a href='index.php'>Повернутися до домашнього завдання</a>";
