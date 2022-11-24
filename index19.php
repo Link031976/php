@@ -1,9 +1,11 @@
 <?php
     //line 19
+   // ім'я папки для опрацювання
+    //the name of the folder to process
+    $f='Model2';
     echo "<p style='color: red'>Урок 14 Завдання 19 </p>";
-    require_once('model2/employee.php');
-    require_once('model2/student.php');
-    require_once('model2/usersCollection.php');
+    require_once('autoloader.php');
+    
 
     
     $arr[] = new Employee('Student 1',10000);
@@ -24,4 +26,6 @@
     print_r($usersCollection);
 
     echo "сума зарплата працівників : ".$usersCollection->sumSalary()."<br>";
-    echo "сума стипендій студентів: ".$usersCollection->sumScholarship()."<br>";
+    echo "сума стипендій студентів: ".$usersCollection->sumScholarship()."<br><br>";
+
+    echo "<a href='index.php'>На початок</a>";

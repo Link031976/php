@@ -3,10 +3,7 @@
     //program for receiving files with class description
     // програма для приєднання файлів з описом классі 
 
-    // ім'я папки для опрацювання
-    //the name of the folder to process
-    $f='Models';
-
+    
     //create an object with methods for working with files
     //Створюю об'єкт з методом для роботи з файлами
     $bf = new DirectoryIterator($f); 

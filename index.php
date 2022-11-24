@@ -1,6 +1,12 @@
 <?php
-    require_once('autoloader.php');
-    require_once('line.php');
+    // Завантаження опису класів
+    
+    // ім'я папки для опрацювання
+    //the name of the folder to process
+    $f='Models';
+
+    require_once('autoloader.php'); 
+    
     
     function compare($obj1, $obj2)
     {
