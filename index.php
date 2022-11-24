@@ -31,3 +31,17 @@ echo "Додано ". User::$calculator." об'єктів класу User";
 
 echo "<p style='color: blue'>Урок 16 завдання 2 </p>";
 //2.	Самостійно переробте код вашого класу User відповідно до теоретичної частини уроку.
+$calc = 0;
+if (is_a($user1, 'User')) $calc++;
+if (is_a($user2, 'User')) $calc++;
+if (is_a($user3, 'User')) $calc++;
+
+echo "Додано ". $calc." об'єктів класу User"; 
+
+//3.	Реалізуйте запропонований клас Circle самостійно.
+$circle = new Circle;
+echo "<p style='color: blue'>Урок 16 завдання 4 </p>";
+//4.	За допомогою написаного класу Circle знайдіть довжину кола та площу кола з радіусом 10
+$circle::$radius = 10;
+echo "Площа кола з радіулом ".$circle::$radius." дорівнює ". $circle->area()."<br>";
+echo "Довжину кола з радіулом ".$circle::$radius." дорівнює ". $circle->circuit()."<br>";
