@@ -83,3 +83,32 @@ require_once('autoloader.php');
     //Нехай у вас є клас Test1 і немає класу Test3. Перевірте, чи виведе функція class_exists для класу Test1 та для класу Test3.
     if (class_exists('Test1')) echo "Клас Test1 об'явлений<br>"; else echo "Клас Test1 не об'явлений <br>";
     if (class_exists('Test3')) echo "Клас Test3 об'явлений<br>"; else echo "Клас Test3 не об'явлений<br>";
+
+    //Нехай GET параметр в адресний рядок передається назву класу. 
+    //Перевірте, чи є такий клас. Виведіть відповідне повідомлення на екран.
+    $nameClass = $_GET['in_class_exists']; //із глобального масиву GET повертає значення імені класу
+    if (class_exists($nameClass)) echo "Клас ".$nameClass." об'явлений<br>"; else echo "Клас ".$nameClass." не об'явлений<br>";
+    
+    echo "<p style='color: blue'>Урок 16 method_exists </p>";
+    //Зробіть клас Test із методом method1 і без методу method4. 
+    //Перевірте, чи виведе функцію method_exists для методу method1 та методу method4.
+    if (method_exists($test,'method1')) echo "Метод method1 існує<br>"; else echo "Метод method1 не існує<br>";
+    if (method_exists($test,'method4')) echo "Метод method4 існує<br>"; else echo "Метод method4 не існує<br>";
+
+    //Нехай GET параметрами в адресний рядок передаються назва класу та його метод. Перевірте, чи є такий клас.
+    // Якщо існує – перевірте існування переданого методу. Якщо й метод існує - створіть об'єкт даного класу,
+    // викличте вказаний метод та виведіть результат його роботи на екран.
+    $nameMethod = $_GET['in_metod_exists'];//із глобального масиву GET повертає значення імені методу
+    if (class_exists($nameClass)) 
+        if (method_exists($nameClass,$nameMethod))
+            {
+                $newClass = new $nameClass;
+                echo $newClass-> $nameMethod();
+            }
+
+    echo "<p style='color: blue'>Урок 16 property_exists </p>";       
+    //Зробіть клас Test із властивістю prop1 і без властивості prop5. Перевірте, 
+    //чи виведе функція property_exists для властивості prop1 та для властивості prop5.
+    if (property_exists($test,'prop1')) echo "Атрибут prop1 існує<br>"; else echo "Атребут prop1 не існує<br>";
+    if (property_exists($test,'prop5')) echo "Атрибут prop5 існує<br>"; else echo "Атребут prop5 не існує<br>";
+    
