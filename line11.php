@@ -15,5 +15,6 @@
 		echo "<p style='color: red'>Урок 15 Завдання 15 </p>";
 		$arr=[1,2,3];
 		echo ArraySumHelper::getSum2($arr);
+		echo "<br><a href='index.php'> Повернення до завдання 1 </a>";
 		
 		

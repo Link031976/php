@@ -1,8 +1,12 @@
 <?php
+    // ім'я папки для опрацювання
+    //the name of the folder to process
     $f='Models';
+
+    //приєднання файлів з описом классі 
     require_once('autoloader.php');    
 	
-	echo "<pre>";
+	echo "<pre>"; 
 	
 	//line 2
 	echo "<p style='color: red'>Урок 15 Завдання 2 </p>";
