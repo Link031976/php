@@ -26,4 +26,9 @@ class Rectangle extends Figure
     {
         return $this->$name;
     }
+    //метод getSquarePerimeterSum, який знаходитиме суму площі та периметра
+    public function getSquarePerimeterSum()
+    {
+        return $this->getSquare() + $this->getPerimeter();
+    }
 }

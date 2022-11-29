@@ -52,3 +52,4 @@ echo "площа прямокутника ".$rectangle->getSquare().", а пер
 
 //5.	Додайте в клас Figure метод getSquarePerimeterSum, який знаходитиме суму площі та периметра.
 echo "<p style='color: blue'>Урок 17 завдання 5 </p>";
+echo "сума площі та периметра прямокутника ".$rectangle->getSquarePerimeterSum();

@@ -2,8 +2,11 @@
 // абстрактний класс Figure (фігура)
 abstract class Figure
 {
-    // обчислення площи прямокутника
+    // метод обчислення площи прямокутника
     abstract public function getSquare();
-    // обчислення периметру прямокутника
+    // метод обчислення периметру прямокутника
     abstract public function getPerimeter();
+    //метод getSquarePerimeterSum, який знаходитиме суму площі та периметра
+    abstract public function getSquarePerimeterSum();
+
 }
