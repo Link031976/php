@@ -12,11 +12,11 @@ echo "<p style='color: blue'>Урок 17 завдання 1 </p>";
 
 $employee = new Employee;
 $employee->salary = 12000;
-echo "Робітнеку встановлено зарплату".$employee->salary."<br>";
+echo "Робітнеку встановлено зарплату" . $employee->salary . "<br>";
 
 $student = new Student;
 $student->scholarship = 10000;
-echo "Студенту встановлено степендію".$student->scholarship."<br>";
+echo "Студенту встановлено степендію" . $student->scholarship . "<br>";
 
 //2.	Додайте у ваш клас User такий же абстрактний метод increaseRevenue. 
 //Напишіть реалізацію цього у класах Employee і Student.
@@ -26,8 +26,8 @@ echo "Робітнику та студенту збільшено зарплат
 $employee->increaseRevenue(500);
 $student->increaseRevenue(500);
 
-echo "зарплата робітника - ".$employee->salary."<br>";
-echo "степендія студента - ".$student->scholarship."<br>";
+echo "зарплата робітника - " . $employee->salary . "<br>";
+echo "степендія студента - " . $student->scholarship . "<br>";
 
 echo "<p style='color: blue'>Урок 17 завдання 3 </p>";
 //3.	Додайте також у ваш клас User абстрактний метод decreaseRevenue (зменшити зарплату).
@@ -37,12 +37,18 @@ echo "Робітнику та студенту зменшено зарплату
 $employee->decreaseRevenue(200);
 $student->decreaseRevenue(200);
 
-echo "зарплата робітника - ".$employee->salary."<br>";
-echo "степендія студента - ".$student->scholarship."<br>";
+echo "зарплата робітника - " . $employee->salary . "<br>";
+echo "степендія студента - " . $student->scholarship . "<br>";
 
 echo "<p style='color: blue'>Урок 17 завдання 4 </p>";
 //4.	Зробіть аналогічний клас Rectangle (прямокутник), який має дві приватні властивості:
 // $a для ширини і $b для довжини. Цей клас також повинен успадковувати від класу Figure та реалізовувати його методи.
 
+$rectangle = new Rectangle;
+$rectangle->set('a', 20); // ширини прямокутника
+$rectangle->set('b', 40); // довжина прямокутника
+echo "Для прямокутника ширеною " . $rectangle->get('a') . " та довжиною " . $rectangle->get('b') . "<br>";
+echo "площа прямокутника ".$rectangle->getSquare().", а периметр ".$rectangle->getPerimeter()."<br>";
 
 //5.	Додайте в клас Figure метод getSquarePerimeterSum, який знаходитиме суму площі та периметра.
+echo "<p style='color: blue'>Урок 17 завдання 5 </p>";
