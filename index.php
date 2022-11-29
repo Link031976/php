@@ -11,11 +11,11 @@ include_once('autoloader.php');
 echo "<p style='color: blue'>Урок 17 завдання 1 </p>";
 
 $employee = new Employee;
-$employee->salary = 12000;
+$employee->salary = 12000; //встановлення розміту зарплати
 echo "Робітнеку встановлено зарплату" . $employee->salary . "<br>";
 
 $student = new Student;
-$student->scholarship = 10000;
+$student->scholarship = 10000; //встановлення розміру степендії
 echo "Студенту встановлено степендію" . $student->scholarship . "<br>";
 
 //2.	Додайте у ваш клас User такий же абстрактний метод increaseRevenue. 

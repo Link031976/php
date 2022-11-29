@@ -24,6 +24,6 @@ foreach ($bf as $fileinfo) {
             require_once($f . "\\" . $fileinfo->getFilename());
 
             //for code testing для тестування коду
-            echo $f."\\".$name."<br>";
+            //echo $f."\\".$name."<br>";
         }
 }
