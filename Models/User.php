@@ -12,4 +12,6 @@ abstract class User
     }
     // абстрактний метод increaseRevenue (збільшення доходу)
     abstract public function increaseRevenue($value);
+    // абстрактний метод decreaseRevenue (зменшити зарплату)
+    abstract public function decreaseRevenue($value);
 }
