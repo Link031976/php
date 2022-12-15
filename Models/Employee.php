@@ -6,13 +6,13 @@ class Employee extends User
     public $salary; // розмір зарплати 
 
     //реалізація метода збільшення зарплати
-    public function increaseRevenue($value)
+    public function increaseRevenue(int $value)
     {
         $this->salary = $this->salary + $value;
     }
 
     //реалізація метода зменшити зарплати
-    public function decreaseRevenue($value)
+    public function decreaseRevenue(int $value)
     {
         $this->salary = $this->salary - $value;
     }
