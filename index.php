@@ -20,5 +20,3 @@ $figuresCollection->addFigure($rectangle);
 echo "Сумарний периметр всіх фігур " . $figuresCollection->getTotalSquare();
 
 echo "<h4 style='color: red'>Урок 18 завдання 4</h4>";
-
-

@@ -1,5 +1,7 @@
 <?php
-//опис інтерфейсу iUser
+//4.	Нехай у нас дано такий інтерфейс:
+
+//5.	Зробіть інтерфейс iUser із методами getName, setName, getAge, setAge.
 interface iUser
 {
     public function setName($name); // встановити ім'я
