@@ -13,12 +13,12 @@ class Disk implements Figure
     //Повернення значення площі кругу
     public function getSquare(): float
     {
-        return $this->Pi * pow($this->radius, 2); //pi*r^2
+        return Disk::PI * pow($this->radius, 2); //pi*r^2
     }
 
     //Повернення значення периметру кругу
     public function getPerimeter(): float
     {
-        return 2 * $this->Pi * $this->radius; //2*pi*r
+        return 2 * $this->PI * $this->radius; //2*pi*r
     }
 }
