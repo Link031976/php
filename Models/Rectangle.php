@@ -3,8 +3,8 @@ require_once('Models\Figure.php');
 // класс Rectangle як нащадок абстрактного класу Figure
 class Rectangle extends Figure
 {
-    private $a; // ширини прямокутника
-    private $b; // довжина прямокутника
+    private float $a; // ширини прямокутника
+    private float $b; // довжина прямокутника
 
     // реалізація метода getSquare для обчислення площі прямокутника
     public function getSquare(): float
@@ -17,7 +17,7 @@ class Rectangle extends Figure
         return $this->a + $this->b;
     }
     // задання значення val для властивості name 
-    public function set(string $name,$val)
+    public function set(string $name, float $val)
     {
         $this->$name = $val;
     }

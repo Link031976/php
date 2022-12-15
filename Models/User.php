@@ -1,8 +1,8 @@
 <?php
 abstract class User
 {
-    public $name;
-    public function getName()
+    public string $name;
+    public function getName():string
     {
         return $this->name;
     }
@@ -11,7 +11,7 @@ abstract class User
         $this->name = $name;
     }
     // абстрактний метод increaseRevenue (збільшення доходу)
-    abstract public function increaseRevenue($value);
+    abstract public function increaseRevenue(int $value);
     // абстрактний метод decreaseRevenue (зменшити зарплату)
-    abstract public function decreaseRevenue($value);
+    abstract public function decreaseRevenue(int $value);
 }
