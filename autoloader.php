@@ -11,6 +11,7 @@ $bf = new DirectoryIterator($f);
 
 //I go through the $f directory with files
 //перебираю ктаталог ($f) з файлами 
+$fileList=[];
 foreach ($bf as $fileinfo) {
     // return filename
     // повертаю ім'я файлу
@@ -24,6 +25,6 @@ foreach ($bf as $fileinfo) {
             require_once($f . "\\" . $fileinfo->getFilename());
 
             //for code testing для тестування коду
-            //echo $f."\\".$name."<br>";
+            echo $f."\\".$name."<br>";
         }
 }

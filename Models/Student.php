@@ -6,12 +6,12 @@ class Student extends User
     public $scholarship; // розмір степендії
 
     //реалізація метода збільшення степендії
-    public function increaseRevenue($value)
+    public function increaseRevenue(int $value)
     {
         $this->scholarship = $this->scholarship + $value;
     }
     //реалізація метода зменшити степендії
-    public function decreaseRevenue($value)
+    public function decreaseRevenue(int $value)
     {
         $this->scholarship = $this->scholarship - $value;
     }
