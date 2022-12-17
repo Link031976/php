@@ -2,12 +2,12 @@
 //2.	Зробіть клас Cube, який реалізує інтерфейс iCube.
 class Cube implements iCube
 {
-    public $edge; //ребро
+    private $edge; //ребро
 
     //конструктор отримує ребро кубу
     public function __construct(float $edge)
     {
-        $this->$edge;
+        $this->edge = $edge;
     }
 
     // повертає об'єм кубу
