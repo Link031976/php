@@ -23,27 +23,42 @@ echo "<h4 style='color: red'>Урок 18 завдання 10</h4>";
 
 //10.	Створіть декілька об'єктів класу Quadrate, кілька об'єктів класу Rectangle та кілька об'єктів класу Cube. 
 //Запишіть їх у масив $arr у випадковому порядку.
-$figuresCollection = new FiguresCollection();
 
-for ($i = 0; $i <= 5; $i++) {
-    $ii = rand(0, 2);
+$figuresCollection = new FiguresCollection(); //створюю об'экт класу колекцыя
 
-    switch ($ii) {
+$i0 = 0;
+$i1 = 0;
+$i2 = 0;
+
+do    
+    switch (rand(0, 2)) {
         case 0:
-            $figuresCollection->addFigure(new Quadrate(rand(0,50)));
-            break;
+            {
+                $figuresCollection->addFigure(new Quadrate(rand(0,50)));
+                $i0++;            
+                break;
+            }
         case 1:
-            $figuresCollection->addFigure(new Rectangle(rand(0,50), rand(0,50)));
-            break;
+            {
+                $figuresCollection->addFigure(new Rectangle(rand(0,50), rand(0,50)));
+                $i1++;
+                break;
+            }
         case 2:
-            $figuresCollection->addFigure(new Cube(rand(0,50)));
-            break;
+            {
+                $figuresCollection->addFigure(new Cube(rand(0,50)));
+                $i2++;
+                break;
+            }
     }
-}
+while ($i0<3 and $i1<3 and $i2<3);
 
 $figuresCollection->getCollection();
+echo "<h4 style='color: red'>Урок 18 завдання 11, 12</h4>";
+//11.	Переберіть циклом масив $arr і виведіть на екран лише площі об'єктів, що реалізують інтерфейс Figure.
 
-echo "<h4 style='color: red'>Урок 18 завдання 11</h4>";
-
+//12.	Переберіть циклом масив $arr і виведіть для плоских фігур їхньої площі, а для об'ємних - площі їхньої поверхні.
+//Всі плоскі фігури описані у інтерфейсі Figure. Реалізація завдання викладено у завданні 11
 $figuresCollection->volumeFigure();
+
 

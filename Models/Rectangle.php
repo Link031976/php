@@ -1,7 +1,7 @@
 <?php
 
 //Прямокутник
-class Rectangle implements Figure 
+class Rectangle implements Figure, iTetragon
 {
     private $a; //довжина
     private $b;//ширина
