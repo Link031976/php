@@ -4,7 +4,7 @@
 class Rectangle implements Figure, iTetragon
 {
     private $a; //довжина
-    private $b;//ширина
+    private $b; //ширина
     //конструктор з параметрами довжени та ширини
     public function __construct($a, $b)
     {

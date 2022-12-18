@@ -22,11 +22,11 @@ class Disk implements Figure, iCircle
     {
         return 2 * $this->PI * $this->radius; //2*pi*r
     }
-    public function getRadius():float
+    public function getRadius(): float
     {
         return $this->radius;
     }
-    public function getDiameter():float
+    public function getDiameter(): float
     {
         return 2 * $this->radius;
     }

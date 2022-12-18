@@ -3,7 +3,7 @@
 //який матиме метод getVolume (отримати обсяг) і метод getSurfaceSquare (отримати площу поверхні).
 interface Figure3d
 {
-    public function getVolume();//отримати обсяг
-    public function getSurfaceSquare();//отримати площу поверхні
+    public function getVolume(); //отримати обсяг
+    public function getSurfaceSquare(); //отримати площу поверхні
 
 }

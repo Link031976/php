@@ -3,10 +3,10 @@
 ////4.	Зробіть клас User, який реалізує інтерфейс iUser.
 class User3 implements iUser3
 {
-    public $name;//ім'я
-    public $age;//вік
+    public $name; //ім'я
+    public $age; //вік
 
-    public function __construct (string $name, int $age)
+    public function __construct(string $name, int $age)
     {
         $this->name = $name;
         $this->age = $age;

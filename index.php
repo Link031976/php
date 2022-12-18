@@ -26,32 +26,28 @@ echo "<h4 style='color: red'>Урок 18 завдання 10</h4>";
 
 $figuresCollection = new FiguresCollection(); //створюю об'экт класу колекцыя
 
-$i0 = 0;
-$i1 = 0;
-$i2 = 0;
+$i0 = 0; //лічильник для класу Quadrate
+$i1 = 0; //лічильник для класу Rectangle
+$i2 = 0; //лічильник для класу Cube
 
-do    
-    switch (rand(0, 2)) {
-        case 0:
-            {
-                $figuresCollection->addFigure(new Quadrate(rand(0,50)));
-                $i0++;            
+do
+    switch (rand(0, 2)) { //генерую число - тип фігури
+        case 0: {
+                $figuresCollection->addFigure(new Quadrate(rand(0, 50))); // створюю клас Quadrate до колекції
+                $i0++; //інкримент лічильника фігур   Quadrate   
                 break;
             }
-        case 1:
-            {
-                $figuresCollection->addFigure(new Rectangle(rand(0,50), rand(0,50)));
-                $i1++;
+        case 1: {
+                $figuresCollection->addFigure(new Rectangle(rand(0, 50), rand(0, 50))); // створюю клас Quadrate до колекції
+                $i1++; //інкримент лічильника фігур Rectangle     
                 break;
             }
-        case 2:
-            {
-                $figuresCollection->addFigure(new Cube(rand(0,50)));
-                $i2++;
+        case 2: {
+                $figuresCollection->addFigure(new Cube(rand(0, 50))); // створюю клас Quadrate до колекції
+                $i2++; //інкримент лічильника фігур  Cube    
                 break;
             }
-    }
-while ($i0<3 and $i1<3 and $i2<3);
+    } while ($i0 < 3 and ($i1 < 3 and $i2 < 3));
 
 $figuresCollection->getCollection();
 echo "<h4 style='color: red'>Урок 18 завдання 11, 12</h4>";
@@ -60,5 +56,3 @@ echo "<h4 style='color: red'>Урок 18 завдання 11, 12</h4>";
 //12.	Переберіть циклом масив $arr і виведіть для плоских фігур їхньої площі, а для об'ємних - площі їхньої поверхні.
 //Всі плоскі фігури описані у інтерфейсі Figure. Реалізація завдання викладено у завданні 11
 $figuresCollection->volumeFigure();
-
-

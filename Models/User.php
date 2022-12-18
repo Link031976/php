@@ -3,8 +3,8 @@
 //клас User як реалізація інтерфейсу iUser
 class User implements iUser
 {
-    public $name;//ім'я
-    public $age;//вік
+    public $name; //ім'я
+    public $age; //вік
 
     // встановити ім'я
     public function setName($name)

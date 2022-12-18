@@ -40,7 +40,7 @@ class Employee implements iEmployee
         $this->salary = $salary;
     }
     //повертає розмір зарплати
-    public function getSalary(int $salary): int
+    public function getSalary()
     {
         return $this->salary;
     }
