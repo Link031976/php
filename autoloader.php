@@ -7,6 +7,7 @@
 //    
 //create an object with methods for working with files
 //Створюю об'єкт "база файлів"
+
 $bf = new DirectoryIterator($f);
 
 //I go through the $f directory with files
@@ -26,4 +27,5 @@ foreach ($bf as $fileinfo) {
             //for code testing для тестування коду
             //echo $f."\\".$name."<br>";
         }
+        
 }
